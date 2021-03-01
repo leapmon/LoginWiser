@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import Head from 'next/head'
 
-
 import Section from '../../StyledComponents/Page1Section';
 import ColumnLeft from '../../StyledComponents/Page2ColumnLeft';
 import ColumnRight from '../../StyledComponents/Page3ColumnRight';
@@ -35,7 +34,6 @@ const store = createStore(reducer, applyMiddleware(thunk));
 import { connect } from "react-redux";
 import { login }  from "../../store/action";
 import { logout } from "../../store/action";
-import {authUser} from "../../store/action";
 
 const Home = (props) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -50,10 +48,9 @@ const Home = (props) => {
       setIsSubmitted(false);
   }
 
-
   return (
       <>
-       {!isSubmitted ? <FormLogin ClickHandler={submitForm} /> : <FormSuccess ClickHandler={logOut} /> }
+       {!isSubmitted ? <FormLogin ClickHandler={login} /> : <FormSuccess ClickHandler={logOut} /> }
        {console.log(isSubmitted)}
       </>
   )
@@ -66,15 +63,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  const a = ({useremail: "Leandro", userpassworl: "sapo"});
-  
   return {
-    authUser : () => dispatch(authUser()),
     login : () => dispatch(login()),
     logout : () => dispatch(logout())
   };
 };
 
 //export default Home
-
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

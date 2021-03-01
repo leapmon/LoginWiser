@@ -5,14 +5,13 @@ import FormSucess from './FormSuccess'
 import { connect } from "react-redux";
 import { login }  from "../../store/action";
 import { logout } from "../../store/action";
-import {authUser} from "../../store/action";
 
 const Form = (props) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     return (
         <div>
-          { !props.isLogged && ( <FormLogin ClickHandler={ props.authUser }  /> )}
+          { !props.isLogged && ( <FormLogin ClickHandler={ props.login }  /> )}
           { props.isLogged && ( <FormSucess ClickHandler={ props.logout} /> )}
         </div>
     )
@@ -28,7 +27,6 @@ const mapDispatchToProps = dispatch => {
   const a = ({useremail: "Leandro", userpassworl: "sapo"});
   
   return {
-    authUser : () => dispatch(authUser()),
     login : () => dispatch(login()),
     logout : () => dispatch(logout())
   };
