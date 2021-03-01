@@ -1,11 +1,11 @@
 import React from 'react';
-import Section from './StyledComponents/Page1Section';
-import ColumnLeft from './StyledComponents/Page2ColumnLeft';
-import ColumnRight from './StyledComponents/Page3ColumnRight';
-import StyledForm from './StyledComponents/Page4StyledForm';
-import Welcome from './StyledComponents/Page5Welcome';
-import Button from './StyledComponents/Page13Button';
-import LabelButton from './StyledComponents/Page14LabelButton';
+import Section from '../../StyledComponents/Page1Section';
+import ColumnLeft from '../../StyledComponents/Page2ColumnLeft';
+import ColumnRight from '../../StyledComponents/Page3ColumnRight';
+import StyledForm from '../../StyledComponents/Page4StyledForm';
+import Welcome from '../../StyledComponents/Page5Welcome';
+import Button from '../../StyledComponents/Page13Button';
+import LabelButton from '../../StyledComponents/Page14LabelButton';
 
 import Link from 'next/link'
 
