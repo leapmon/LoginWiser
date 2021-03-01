@@ -1,17 +1,16 @@
 //import apiaxios from "../api/apiaxios"
-import * as actionTypes from "./ActionTypes"
 
   export const login = () => {
     console.log("ENTROU NA LOGIn");
     return (dispatch) => {
-        dispatch({ type: actionTypes.USER_LOGIN,  isLogged: true });
+        dispatch({ type: "login",  isLogged: true });
     };
   }
 
   export const logout = () => {
     console.log("ENTROU NA LOGOUT");
     return (dispatch) => {
-        dispatch({ type: actionTypes.USER_LOGOUT, isLogged: false });
+        dispatch({ type: "logout", isLogged: false });
     };
 
   }  
@@ -24,7 +23,7 @@ export interface PackageData {
 export const MinhaFunc = (data:any) => {
   console.log(data[0].id);
   return (dispatch) => {
-    dispatch({ type: actionTypes.USER_LOGIN, isLogged: true });
+    dispatch({ type: "login", isLogged: true });
   }
   //;a=res.data[0].id
 }
@@ -40,7 +39,7 @@ export const authUser = () => {
       //console.log(a);
       
       //if(a==17)
-      dispatch({ type: actionTypes.USER_LOGIN, isLogged: true });
+      dispatch({ type: "login", isLogged: true });
       //else
         //console.log("OPCAO 2");
         

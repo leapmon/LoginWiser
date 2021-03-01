@@ -1,14 +1,12 @@
-import * as actionTypes from "./ActionTypes"
-
 const initialState = {
     isLogged: false
   };
   
   const reducer = function(state = initialState, action) {
     console.log("ENTREI NO REDUTOR!!!");
-    if (action.type === actionTypes.USER_LOGIN) {
+    if (action.type === "login") {
       return { ...state, isLogged: action.isLogged};
-    } else if (action.type === actionTypes.USER_LOGOUT) {
+    } else if (action.type === "logout") {
       return { ...state, isLogged: action.isLogged};
     } 
     else {
