@@ -12,6 +12,7 @@ import styled, { css } from 'styled-components';
 
         background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);
         border-radius: 8px;
+        outline: none;
 
         @media (max-width:500px)
         {
