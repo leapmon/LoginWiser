@@ -260,8 +260,6 @@ Você notará que agora, diferentemente da estrutura criada no padrão `create-r
 
 Em seguida, para que o projeto seja feito em TypeScript, é preciso adicionar um arquivo `tsconfig.json` na raiz do projeto.
 
-A versão atual feita com `Next.js` apresentou alguns problemas no servidor de testes <b>Heroku</b>, razão pela qual este repositório possui a penúltima versão, sendo esta a última estável. Assim que o problema for resolvido, ela será atualizada neste repositório.
-
 
 ### `Contato`
 
