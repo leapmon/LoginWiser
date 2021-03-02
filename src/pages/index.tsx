@@ -4,8 +4,8 @@ import FormLogin from './FormLogin'
 import FormSuccess from './FormSuccess'
 
 import { connect } from "react-redux";
-import { login }  from "../../store/action";
-import { logout } from "../../store/action";
+import { login }  from "../store/action";
+import { logout } from "../store/action";
 
 const Home = (props) => {
   return (
